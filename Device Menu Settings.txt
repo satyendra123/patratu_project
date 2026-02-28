@@ -1,0 +1,7 @@
+Device menu settings
+1、MENU--Comm set-Ethernet--DHCP(yes)
+2、MENU--Comm set--server--server req(yes)
+3、MENU--Comm set--server--server ip(PC IP or server ip)
+4、MENU--Comm set--server--serPortNO(7788)
+
+

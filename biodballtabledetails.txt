@@ -1,0 +1,363 @@
+{
+  "database": "BIO_DATA_NTPC_CLIMS",
+  "views": {
+    "count": 0,
+    "items": []
+  },
+  "tables": [
+    {
+      "table": "ATTLOG",
+      "row_count": 1677054,
+      "required_columns": ["ATT_ID"],
+      "columns": [
+        { "name": "ATT_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "USER_CODE", "type": "varchar(20)", "nullable": true },
+        { "name": "ATT_DATE", "type": "datetime", "nullable": true },
+        { "name": "ATT_DATETIME", "type": "datetime", "nullable": true },
+        { "name": "INOUT_ID", "type": "varchar(10)", "nullable": true },
+        { "name": "COL2", "type": "varchar(10)", "nullable": true },
+        { "name": "COL3", "type": "varchar(10)", "nullable": true },
+        { "name": "COL4", "type": "varchar(10)", "nullable": true },
+        { "name": "ISFTP", "type": "bit", "nullable": true },
+        { "name": "COL5", "type": "varchar(10)", "nullable": true },
+        { "name": "COL6", "type": "varchar(10)", "nullable": true },
+        { "name": "COL7", "type": "varchar(10)", "nullable": true },
+        { "name": "COL8", "type": "varchar(10)", "nullable": true },
+        { "name": "COL9", "type": "varchar(10)", "nullable": true },
+        { "name": "cap_date", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_BIODATA",
+      "row_count": 180892,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "NO", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPSIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPVALID", "type": "varchar(10)", "nullable": true },
+        { "name": "FPTMP", "type": "ntext", "nullable": true },
+        { "name": "DURESS", "type": "numeric(10,0)", "nullable": true },
+        { "name": "TYPE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "MAJOR_VER", "type": "numeric(10,0)", "nullable": true },
+        { "name": "MINOR_VER", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FORMAT", "type": "numeric(10,0)", "nullable": true },
+        { "name": "INDX", "type": "numeric(4,0)", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_BIODATA_LOG",
+      "row_count": 72307,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "NO", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPSIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPVALID", "type": "varchar(10)", "nullable": true },
+        { "name": "DURESS", "type": "numeric(10,0)", "nullable": true },
+        { "name": "TYPE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "MAJOR_VER", "type": "numeric(10,0)", "nullable": true },
+        { "name": "MINOR_VER", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FORMAT", "type": "numeric(10,0)", "nullable": true },
+        { "name": "INDX", "type": "numeric(4,0)", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_BIOPHOTO",
+      "row_count": 0,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "SIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPTMP", "type": "ntext", "nullable": true },
+        { "name": "TYP", "type": "numeric(10,0)", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_BIOPHOTO_LOG",
+      "row_count": 0,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "SIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "TYP", "type": "numeric(10,0)", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_FACEDATA",
+      "row_count": 0,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "FINDEX", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPSIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPVALID", "type": "varchar(10)", "nullable": true },
+        { "name": "FPTMP", "type": "ntext", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_FACEDATA_LOG",
+      "row_count": 0,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "FINDEX", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPSIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPVALID", "type": "varchar(10)", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_FPDATA",
+      "row_count": 771,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "FINDEX", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPSIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPVALID", "type": "varchar(10)", "nullable": true },
+        { "name": "FPTMP", "type": "ntext", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_FPDATA_LOG",
+      "row_count": 5076,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "FINDEX", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPSIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "FPVALID", "type": "varchar(10)", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_PICDATA",
+      "row_count": 5632,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "SIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "IMAGE", "type": "ntext", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_PICDATA_LOG",
+      "row_count": 6381,
+      "required_columns": ["BP_ID"],
+      "columns": [
+        { "name": "BP_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "BP_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "SIZE", "type": "numeric(10,0)", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_USERMAST",
+      "row_count": 17972,
+      "required_columns": ["BU_ID"],
+      "columns": [
+        { "name": "BU_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "TR_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "NAME", "type": "varchar(50)", "nullable": true },
+        { "name": "PRI", "type": "varchar(10)", "nullable": true },
+        { "name": "PASSWD", "type": "varchar(10)", "nullable": true },
+        { "name": "CARDNO", "type": "varchar(20)", "nullable": true },
+        { "name": "GRPNO", "type": "varchar(10)", "nullable": true },
+        { "name": "TZ", "type": "varchar(20)", "nullable": true },
+        { "name": "ISDELETED", "type": "bit", "nullable": true },
+        { "name": "DEL_DATE", "type": "datetime", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true },
+        { "name": "Verify", "type": "char(5)", "nullable": true }
+      ]
+    },
+    {
+      "table": "BIO_USERMAST_LOG",
+      "row_count": 165717,
+      "required_columns": ["BU_ID"],
+      "columns": [
+        { "name": "BU_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "TR_DATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "ID", "type": "varchar(20)", "nullable": true },
+        { "name": "NAME", "type": "varchar(50)", "nullable": true },
+        { "name": "PRI", "type": "varchar(10)", "nullable": true },
+        { "name": "PASSWD", "type": "varchar(10)", "nullable": true },
+        { "name": "CARDNO", "type": "varchar(20)", "nullable": true },
+        { "name": "GRPNO", "type": "varchar(10)", "nullable": true },
+        { "name": "TZ", "type": "varchar(20)", "nullable": true },
+        { "name": "ISDELETED", "type": "bit", "nullable": true },
+        { "name": "DEL_DATE", "type": "datetime", "nullable": true },
+        { "name": "UPD_DATE", "type": "datetime", "nullable": true },
+        { "name": "Verify", "type": "char(5)", "nullable": true }
+      ]
+    },
+    {
+      "table": "DEVICECMD",
+      "row_count": 163199,
+      "required_columns": ["DC_ID"],
+      "columns": [
+        { "name": "DC_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "DC_CMD", "type": "ntext", "nullable": true },
+        { "name": "DC_DATE", "type": "datetime", "nullable": true },
+        { "name": "DC_EXECDATE", "type": "datetime", "nullable": true },
+        { "name": "DC_RES", "type": "varchar(100)", "nullable": true },
+        { "name": "DC_RESDATE", "type": "datetime", "nullable": true },
+        { "name": "CMD_DESC", "type": "varchar(100)", "nullable": true },
+        { "name": "REF_ID", "type": "numeric(10,0)", "nullable": true },
+        { "name": "src_sno", "type": "varchar(20)", "nullable": true },
+        { "name": "DC_cmd_date", "type": "datetime", "nullable": true },
+        { "name": "IS_DEL_EXECUTED", "type": "bit", "nullable": true }
+      ]
+    },
+    {
+      "table": "Devicecmd_210406",
+      "row_count": 436992,
+      "required_columns": ["DC_ID"],
+      "columns": [
+        { "name": "DC_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "DC_CMD", "type": "ntext", "nullable": true },
+        { "name": "DC_DATE", "type": "datetime", "nullable": true },
+        { "name": "DC_EXECDATE", "type": "datetime", "nullable": true },
+        { "name": "DC_RES", "type": "varchar(100)", "nullable": true },
+        { "name": "DC_RESDATE", "type": "datetime", "nullable": true },
+        { "name": "CMD_DESC", "type": "nvarchar(255)", "nullable": true },
+        { "name": "REF_ID", "type": "numeric(10,0)", "nullable": true }
+      ]
+    },
+    {
+      "table": "DEVICECMD_BKP",
+      "row_count": 3215548,
+      "required_columns": [],
+      "columns": [
+        { "name": "DC_ID", "type": "numeric(10,0)", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "DC_CMD", "type": "ntext", "nullable": true },
+        { "name": "DC_DATE", "type": "datetime", "nullable": true },
+        { "name": "DC_EXECDATE", "type": "datetime", "nullable": true },
+        { "name": "DC_RES", "type": "varchar(100)", "nullable": true },
+        { "name": "DC_RESDATE", "type": "datetime", "nullable": true },
+        { "name": "CMD_DESC", "type": "varchar(100)", "nullable": true },
+        { "name": "REF_ID", "type": "numeric(10,0)", "nullable": true },
+        { "name": "src_sno", "type": "varchar(20)", "nullable": true },
+        { "name": "dc_cmd_date", "type": "datetime", "nullable": true }
+      ]
+    },
+    {
+      "table": "DEVICEINFO",
+      "row_count": 913,
+      "required_columns": ["DI_ID"],
+      "columns": [
+        { "name": "DI_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "DI_PARAM", "type": "varchar(50)", "nullable": true },
+        { "name": "DI_VALUE", "type": "varchar(100)", "nullable": true },
+        { "name": "DI_MANUAL", "type": "bit", "nullable": true }
+      ]
+    },
+    {
+      "table": "FTP_EXEC_LOG",
+      "row_count": 0,
+      "required_columns": ["FL_ID"],
+      "columns": [
+        { "name": "FL_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "FL_DATE", "type": "datetime", "nullable": true },
+        { "name": "FL_LOG", "type": "varchar(max)", "nullable": true }
+      ]
+    },
+    {
+      "table": "OPERLOG",
+      "row_count": 227,
+      "required_columns": ["OL_ID"],
+      "columns": [
+        { "name": "OL_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "OL_TRDATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "OL_DATA", "type": "ntext", "nullable": true }
+      ]
+    },
+    {
+      "table": "OPLOG",
+      "row_count": 0,
+      "required_columns": ["OL_ID"],
+      "columns": [
+        { "name": "OL_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "OL_TRDATE", "type": "datetime", "nullable": true },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "OL_TRID", "type": "numeric(10,0)", "nullable": true },
+        { "name": "OP_DATCOL3", "type": "numeric(10,0)", "nullable": true },
+        { "name": "OL_DATE", "type": "datetime", "nullable": true },
+        { "name": "OP_DATCOL5", "type": "numeric(10,0)", "nullable": true },
+        { "name": "OP_DATCOL6", "type": "numeric(10,0)", "nullable": true },
+        { "name": "OP_DATCOL7", "type": "numeric(10,0)", "nullable": true },
+        { "name": "OP_DATCOL8", "type": "numeric(10,0)", "nullable": true }
+      ]
+    },
+    {
+      "table": "PING",
+      "row_count": 12,
+      "required_columns": ["P_ID"],
+      "columns": [
+        { "name": "P_ID", "type": "numeric(10,0)", "nullable": false },
+        { "name": "SLNO", "type": "varchar(20)", "nullable": true },
+        { "name": "P_DATE", "type": "datetime", "nullable": true },
+        { "name": "CUSTOMER", "type": "varchar(20)", "nullable": true },
+        { "name": "ACT_DATE", "type": "datetime", "nullable": true },
+        { "name": "REM", "type": "varchar(30)", "nullable": true },
+        { "name": "ATTSTAMP", "type": "numeric(15,0)", "nullable": true },
+        { "name": "OPSTAMP", "type": "numeric(15,0)", "nullable": true },
+        { "name": "ATT_DATETIME", "type": "datetime", "nullable": true },
+        { "name": "ATT_USERCODE", "type": "varchar(20)", "nullable": true }
+      ]
+    },
+    {
+      "table": "sysdiagrams",
+      "row_count": 0,
+      "required_columns": ["name", "principal_id", "diagram_id"],
+      "columns": [
+        { "name": "name", "type": "nvarchar(128)", "nullable": false },
+        { "name": "principal_id", "type": "int", "nullable": false },
+        { "name": "diagram_id", "type": "int", "nullable": false },
+        { "name": "version", "type": "int", "nullable": true },
+        { "name": "definition", "type": "varbinary(max)", "nullable": true }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+MSSQL integration change log (2026-02-25)
+
+1) Database and dependency config changes
+- Updated: demo/src/main/resources/jdbc.properties
+  - Uses SQL Server JDBC URL with Windows integrated auth on localhost:1433.
+- Updated: demo/pom.xml
+  - Removed mysql:mysql-connector-java.
+  - Kept com.microsoft.sqlserver:mssql-jdbc.
+- Added: fingerprint_mssql.sql
+  - SQL Server version of schema setup script.
+
+2) Eclipse/Tomcat deployment fixes
+- Updated: demo/.classpath
+  - Added org.eclipse.jst.component.dependency=/WEB-INF/lib on MAVEN2 container.
+- Updated: demo/.settings/org.eclipse.wst.common.component
+  - Added dependent-module for Maven classpath container -> /WEB-INF/lib.
+
+3) Runtime jar placement (to avoid missing WEB-INF/lib in Eclipse publish)
+- Added folder: demo/src/main/webapp/WEB-INF/lib
+- Copied required runtime jars into that folder.
+- Copied SQL Server driver from:
+  C:/Users/HP/Downloads/sqljdbc_13.2.1.0_enu/sqljdbc_13.2/enu/jars/mssql-jdbc-13.2.1.jre8.jar
+
+4) SQL Server native auth DLL
+- Copied:
+  C:/Users/HP/Downloads/sqljdbc_13.2.1.0_enu/sqljdbc_13.2/enu/auth/x64/mssql-jdbc_auth-13.2.1.x64.dll
+  -> D:/tomcat/apache-tomcat-9.0.100/bin/mssql-jdbc_auth-13.2.1.x64.dll
+
+5) IDE metadata updates for SQL Server
+- Updated: demo/FingerprintDeviceDemo.iml
+- Updated: demo/.idea/artifacts/FingerprintDeviceDemo_war_exploded.xml
+- Added: demo/.idea/libraries/Maven__com_microsoft_sqlserver_mssql_jdbc_9_4_1_jre8.xml
+- Deleted: demo/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml
+
+Quick rollback to MySQL (manual)
+- Restore demo/src/main/resources/jdbc.properties to MySQL values.
+- Remove demo/src/main/webapp/WEB-INF/lib/mssql-jdbc-13.2.1.jre8.jar if not needed.
+- Re-add mysql dependency in demo/pom.xml if required.
+- Optionally remove D:/tomcat/apache-tomcat-9.0.100/bin/mssql-jdbc_auth-13.2.1.x64.dll.
+- If you want Eclipse to go back to previous behavior, revert:
+  demo/.classpath and demo/.settings/org.eclipse.wst.common.component
